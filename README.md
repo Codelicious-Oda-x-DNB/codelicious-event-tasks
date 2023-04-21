@@ -5,9 +5,13 @@
  
 ### Share your code and learn programming together.
 
-## Quick start
+## Quick start for contribution :rocket:
 
-TODO: Information about how to contribute
+- Accept our invitation to become a member of the community :love_letter:
+- Create a branch and upload your code through Github Web, Desktop or command-line. :computer:
+- Request review from any other members. :nail_care:
+- Code review done. Your code has been accepted. :tada: 
+- Merge the code into our codebase and share it with other members. :raised_hands:
 
 ### Our contributors
 
