@@ -8,15 +8,23 @@ If you didn't attend the last Codelicious workshop, we recommend you to clone Ma
 
 ## This workshop
 
-### Step 1: Sign in or create account in OpenAI
+#### Step 1: Sign in or create account in OpenAI
 [platform.openai.com/login](https://platform.openai.com/login)
 Select chat gpt 3.5, as it is much cheaper, and we don't need a fancy one.
 
-### Step 2: Generate API keys
-In order to authenticate us and use the API, we need to have a bearer key.
-Generate your key here, and call it f ex "Bedtime story": https://platform.openai.com/docs/quickstart?context=node
+#### Step 2: Generate API keys
+We need to include a key to authenticate us when using the API.
+Generate your key here, by clicking "+ Create new secret key": [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 
-### Step 3: Send a request to the API when user clicks "Generate"
+#### Step 3: Add the Dio package to your Flutter project
+We will use Dio to send http-requests to the API: https://pub.dev/packages/dio
+Open up a terminal in the project in VS Code, and paste in the following command to install Dio:
+```
+flutter pub add dio
+```
+
+
+#### Step 4: Send a request to the API when user clicks "Generate"
 Copy this code snippet, and change the OPEN_API_KEY to your own.
 
 ```
@@ -49,9 +57,7 @@ String OPENAI_API_KEY =
         },
       ),
     );
-    Map<String, dynamic> map = response.data;
-    ChatCompletion chatCompletion = ChatCompletion.fromJson(map);
-    return chatCompletion;
+    return response.data;
   }
 
 ```
