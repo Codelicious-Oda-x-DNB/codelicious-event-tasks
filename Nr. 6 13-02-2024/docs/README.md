@@ -61,6 +61,66 @@ String OPENAI_API_KEY =
 
 ```
 
+## This workshop -> online development in Zapp!
+
+### Step 1: Open code in Zapp!
+Open [www.tinyurl.com/codelicious](www.tinyurl.com/codelicious). Here you can see where we left after the last workshop. 
+
+#### Step 2: Sign in or create account in OpenAI
+[platform.openai.com/login](https://platform.openai.com/login)
+Select chat gpt 3.5, as it is much cheaper, and we don't need a fancy one.
+
+NB! If you have created an account previously, you may need to re-create it to get new free credits to be used now. 
+
+#### Step 3: Generate API keys
+We need to include a key to authenticate us when using the API.
+Generate your key here, by clicking "+ Create new secret key": [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+
+#### Step 4: Add the Dio package to your Flutter project
+We will use [Dio](https://pub.dev/packages/dio) to send http-requests to the OpenAI API.
+
+Open `pubspec.yaml` and add `dio` under `dependencies`:
+```
+dio: ^5.4.0
+```
+
+#### Step 5: Send a request to the API when user clicks "Generate"
+Copy this code snippet, and update the OPEN_API_KEY to your own.
+
+```
+String OPENAI_API_KEY =
+      'Bearer <YOUR_SECRET_KEY>';
+  final dio = Dio();
+  Future<ChatCompletion> getOpen() async {
+    final response = await dio.post(
+      'https://api.openai.com/v1/chat/completions',
+      data: {
+        'model': 'gpt-3.5-turbo',
+        'messages': [
+          {
+            'role': 'system',
+            'content':
+                'You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.'
+          },
+          {
+            'role': 'user',
+            'content':
+                'Compose a poem that explains the concept of recursion in programming.'
+          }
+        ]
+      },
+      options: Options(
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': OPENAI_API_KEY,
+        },
+      ),
+    );
+    return response.data;
+  }
+
+```
+
 
 ### Our contributors
 <a href="https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/graphs/contributors">
