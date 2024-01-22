@@ -2,7 +2,7 @@
  In this workshop, we will continue on the Flutter application that we developed last time. Instead of generating word pairs, we will connect to OpenAI's API and generate bedtime stories. 
 
 ## Recap of last workshop
-We followed [this tutorial](https://platform.openai.com/docs/quickstart?context=node), where we made a word generator for Chrome.
+We followed [this tutorial](https://platform.openai.com/docs/quickstart?context=node), where we created a word pair generator for Chrome.
 If you didn't attend the last Codelicious workshop, we recommend you to clone this repo and use [Marina's code from workshop nr 5](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/tree/main/Nr.%205%2014-11-2023/marina-flutter_bedtime_story_generator) as a base.
 
 ## This workshop
@@ -16,7 +16,7 @@ We need to include a key to authenticate us when using the API.
 Generate your key here, by clicking "+ Create new secret key": [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 
 #### Step 3: Add the Dio package to your Flutter project
-We will use Dio to send http-requests to the API: https://pub.dev/packages/dio
+We will use [Dio](https://pub.dev/packages/dio) to send http-requests to the OpenAI API.
 Open up a terminal in the project in VS Code, and paste in the following command to install Dio:
 ```
 flutter pub add dio
@@ -24,7 +24,7 @@ flutter pub add dio
 
 
 #### Step 4: Send a request to the API when user clicks "Generate"
-Copy this code snippet, and change the OPEN_API_KEY to your own.
+Copy this code snippet, and update the OPEN_API_KEY to your own.
 
 ```
 String OPENAI_API_KEY =
