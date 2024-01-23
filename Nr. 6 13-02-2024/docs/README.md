@@ -2,7 +2,7 @@
  In this workshop, we will continue on the Flutter application that we developed last time. Instead of generating word pairs, we will connect to OpenAI's API and generate bedtime stories. 
 
 ## Recap of last workshop
-We followed [this tutorial](https://platform.openai.com/docs/quickstart?context=node), where we created a word pair generator for Chrome.
+We followed [this tutorial](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0), where we created a word pair generator for Chrome.
 If you didn't attend the last Codelicious workshop, we recommend you to clone this repo and use [Marina's code from workshop nr 5](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/tree/main/Nr.%205%2014-11-2023/marina-flutter_bedtime_story_generator) as a base.
 
 ## This workshop
@@ -60,17 +60,21 @@ String OPENAI_API_KEY =
   }
 
 ```
+# Online development
 
-## This workshop -> online development in Zapp!
+## Recap of last workshop
+We followed [this tutorial](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0), where we created a word pair generator for Chrome.
+
+## This workshop 
 
 ### Step 1: Open code in Zapp!
-Open [www.tinyurl.com/codelicious](www.tinyurl.com/codelicious). Here you can see where we left after the last workshop. 
+Open www.tinyurl.com/codelicious-v1. Here you can see where we left after the last workshop. 
 
 #### Step 2: Sign in or create account in OpenAI
 [platform.openai.com/login](https://platform.openai.com/login)
 Select chat gpt 3.5, as it is much cheaper, and we don't need a fancy one.
 
-NB! If you have created an account previously, you may need to re-create it to get new free credits to be used now. 
+NB! If you have created an account previously, you may need to re-create it to get new free credits to be used now. If you don't get new credits, you can use Amanda or Tine's API key 😊
 
 #### Step 3: Generate API keys
 We need to include a key to authenticate us when using the API.
@@ -81,45 +85,57 @@ We will use [Dio](https://pub.dev/packages/dio) to send http-requests to the Ope
 
 Open `pubspec.yaml` and add `dio` under `dependencies`:
 ```
-dio: ^5.4.0
+dependencies:
+   dio: ^5.4.0
 ```
+
+#### Step 5: Change the UI
+
+We want to create a page that looks something like this:
+![image](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/assets/36000728/6b7502d7-1cfe-44dd-8dc8-9b57e9dd83bb)
+
+
+The goal is to have one text field where the user can type, one button that the user needs to click to generate the story by sending an API call to OpenAI, and finally, the results from OpenAI need to show somewhere. 
 
 #### Step 5: Send a request to the API when user clicks "Generate"
-Copy this code snippet, and update the OPEN_API_KEY to your own.
+Copy this code snippet, and paste in your own secret key in the OPEN_API_KEY variable. 
 
 ```
-String OPENAI_API_KEY =
-      'Bearer <YOUR_SECRET_KEY>';
-  final dio = Dio();
-  Future<ChatCompletion> getOpen() async {
-    final response = await dio.post(
-      'https://api.openai.com/v1/chat/completions',
-      data: {
-        'model': 'gpt-3.5-turbo',
-        'messages': [
-          {
-            'role': 'system',
-            'content':
-                'You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.'
-          },
-          {
-            'role': 'user',
-            'content':
-                'Compose a poem that explains the concept of recursion in programming.'
-          }
-        ]
-      },
-      options: Options(
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': OPENAI_API_KEY,
+String OPENAI_API_KEY = 'Bearer <YOUR_SECRET_KEY>';
+final dio = Dio();
+
+Future<ChatCompletion> getOpen() async {
+  final response = await dio.post(
+    'https://api.openai.com/v1/chat/completions',
+    data: {
+      'model': 'gpt-3.5-turbo',
+      'messages': [
+        {
+          'role': 'system',
+          'content':
+              'You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.'
         },
-      ),
-    );
-    return response.data;
-  }
-
+        {
+          'role': 'user',
+          'content':
+              'Compose a poem that explains the concept of recursion in programming.'
+        }
+      ]
+    },
+    options: Options(
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': OPENAI_API_KEY,
+      },
+    ),
+  );
+  return response.data;
+}
 ```
+
+#### Need help?
+
+You can take a look at www.tinyurl.com/codelicious-finished to get inspiration. 
 
 
 ### Our contributors
