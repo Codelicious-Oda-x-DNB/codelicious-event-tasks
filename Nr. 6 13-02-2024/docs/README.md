@@ -78,8 +78,7 @@ class ChatCompletion {
   final String model;
   final List<Choice> choices;
   final Usage usage;
-  final String?
-      systemFingerprint; // Some types has to be optional, as the api returns null here
+  final String? systemFingerprint; // Some types have to be optional, as the api returns null here
 
   ChatCompletion({
     required this.id,
