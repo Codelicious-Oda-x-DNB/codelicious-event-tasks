@@ -46,12 +46,17 @@ We will use [Dio](https://pub.dev/packages/dio) to send http-requests to the Ope
  Online 🛜
 </summary>
 <br>
+
 Open `pubspec.yaml` and add `dio` under `dependencies`:
  
 ```
 dependencies:
    dio: ^5.4.0
 ```
+To update the dependencies in Zapp! you need to press the _Pub Get_ button:
+
+<img width="399" alt="image" src="https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/assets/36000728/1be68c97-5a96-4573-891d-c34c42a9626a">
+
 
  </br>
 </details>
