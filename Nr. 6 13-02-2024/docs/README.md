@@ -22,9 +22,9 @@ Open code in Zapp! at www.tinyurl.com/codelicious-v1. Here you can see where we 
  Local :computer:
 </summary>
 <br>
-Open the code you wrote in the last Codelicious workshop in VS Code. If you didn't attend the last workshop, we recommend you to clone this repo and use Marina's code from workshop nr 5 as a base:
+Open the code you wrote in the last Codelicious workshop in VS Code. If you didn't attend the last workshop, we recommend you to clone this repo and use Amanda's code from workshop nr 5 as a base:
  
- [Marina's code ](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/tree/main/Nr.%205%2014-11-2023/marina-flutter_bedtime_story_generator)
+ [Amanda's code ](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/tree/main/Nr.%205%2014-11-2023/amanda-bedtime-story-generator)
   </br>
 </details>
 
@@ -142,7 +142,7 @@ You can take a look at www.tinyurl.com/codelicious-finished to get inspiration.
  Local :computer:
 </summary>
 <br>
-Insert url Amanda
+[Take a look at the full solution here for inspiration.](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/tree/main/Nr.%206%2013-02-2024/amanda-bedtime-story-generator)
   </br>
 </details>
 
