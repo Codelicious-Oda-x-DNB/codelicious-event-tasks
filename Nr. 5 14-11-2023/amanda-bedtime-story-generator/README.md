@@ -1,16 +1,5 @@
 # night_time_story
 
-A new Flutter project.
+This application was created following the steps in the tutorial here: https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 2024-02-12 at 17 35 50](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/assets/90447375/d3398dc3-61ed-4131-996d-549c685b0b28)
