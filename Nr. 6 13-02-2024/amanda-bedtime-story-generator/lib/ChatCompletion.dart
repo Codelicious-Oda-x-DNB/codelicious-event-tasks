@@ -1,3 +1,6 @@
+/// This is the structure of the chat we recieve.
+/// You don't need to have it, it's just to show you how it looks.
+/// You can instead fetch the chatGPT response by writing [response.choices[0].message.content], as is done in [main.dart].
 class ChatCompletion {
   final String id;
   final String object;
@@ -5,8 +8,7 @@ class ChatCompletion {
   final String model;
   final List<Choice> choices;
   final Usage usage;
-  final String?
-      systemFingerprint; // Some types has to be optional, as the api returns null here
+  final String? systemFingerprint;
 
   ChatCompletion({
     required this.id,

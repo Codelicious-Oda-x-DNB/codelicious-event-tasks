@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             colorScheme: ColorScheme.fromSeed(
                 seedColor: Colors.lightBlueAccent,
-                onBackground: Color.fromRGBO(13, 33, 115, 1),
                 primaryContainer: Color.fromRGBO(13, 33, 115, 1)),
             primaryColor: Color.fromRGBO(157, 211, 250, 1)),
         home: MyHomePage(),
@@ -35,13 +34,15 @@ class MyApp extends StatelessWidget {
 }
 
 class MyAppState extends ChangeNotifier {
-  String current = ""; //WordPair.random();
+  String current = "Generated text will appear here"; //WordPair.random();
+  final myController = TextEditingController();
 
   String OPENAI_API_KEY =
-      'Bearer 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';
+      'Bearer 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';
 
+  /// Fetches the chatGPT response based on the input in the search input field
   final dio = Dio();
-  Future<ChatCompletion> getOpen() async {
+  Future<ChatCompletion> getOpenAIChat() async {
     final response = await dio.post(
       'https://api.openai.com/v1/chat/completions',
       data: {
@@ -55,7 +56,7 @@ class MyAppState extends ChangeNotifier {
           {
             'role': 'user',
             'content':
-                'Compose a poem that explains the concept of recursion in programming.'
+                myController.text // This refers to the search input field
           }
         ]
       },
@@ -72,14 +73,14 @@ class MyAppState extends ChangeNotifier {
     return chatCompletion;
   }
 
+  /// This function runs when the "Generate story"-button is clicked
   void getNext() async {
-    final response = await getOpen();
-    //print("Content: " + response.choices[0].message.content);
+    final response = await getOpenAIChat();
     current = response.choices[0].message.content;
     notifyListeners();
   }
 
-  var favorites = <String>[]; //<WordPair>[];
+  var favorites = <String>[];
 
   void toggleFavorite() {
     if (favorites.contains(current)) {
@@ -148,32 +149,5 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       );
     });
-  }
-}
-
-class BigCard extends StatelessWidget {
-  const BigCard({
-    super.key,
-    required this.pair,
-  });
-
-  final String pair; // WordPair pair;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
-    final style = theme.textTheme.displaySmall!.copyWith(
-      color: theme.colorScheme.onPrimary,
-    );
-
-    return Card(
-      color: theme.colorScheme.primary,
-      elevation: 13,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(pair), //Text("${pair.first} ${pair.second}", style: style),
-      ),
-    );
   }
 }
