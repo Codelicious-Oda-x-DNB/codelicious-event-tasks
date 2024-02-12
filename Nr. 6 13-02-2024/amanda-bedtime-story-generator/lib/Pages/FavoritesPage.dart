@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../main.dart';
 
+/// This was created in Workshop part 1.
+/// No need to spend time on this if you don't already have it.
 class FavoritesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class FavoritesPage extends StatelessWidget {
         for (var pair in appState.favorites)
           ListTile(
             leading: Icon(Icons.favorite),
-            title: Text(pair), // Text(pair.asLowerCase),
+            title: Text(pair), // used to be Text(pair.asLowerCase),
             textColor: Color.fromRGBO(255, 255, 255, 1),
           ),
       ],
