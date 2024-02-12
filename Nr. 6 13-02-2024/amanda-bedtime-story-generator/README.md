@@ -1,16 +1,12 @@
 # night_time_story
 
-A new Flutter project.
+This application is created using Workshop part 1 as a base: [amanda-bedtime-story-generator-part-1](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/tree/main/Nr.%205%2014-11-2023/amanda-bedtime-story-generator.)
 
-## Getting Started
+## The application
+![Screenshot 2024-02-12 at 17 41 16](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/assets/90447375/9e5e281e-68d7-45bd-805a-865d88cfd925)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Structure
+I have created a folder structure to keep the project nice and clean.
+You will find the application pages under /pages.
+You will find all self made UI-components under /widgets.
+You will find the call to OpenAI's API and other functions in the file main.dart.
