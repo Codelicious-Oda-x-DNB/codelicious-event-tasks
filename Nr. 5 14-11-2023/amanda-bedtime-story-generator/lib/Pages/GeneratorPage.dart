@@ -17,12 +17,6 @@ class GeneratorPage extends StatelessWidget {
     }
 
     return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/disney.jpeg"),
-          fit: BoxFit.cover,
-        ),
-      ),
       child: Container(
         decoration: BoxDecoration(
             color: Color.fromARGB(200, 59, 59, 186),
@@ -33,7 +27,7 @@ class GeneratorPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Bedtime story generator",
+                "Word Pair Generator",
                 style: TextStyle(
                     fontSize: 30, color: Color.fromARGB(198, 223, 240, 255)),
               ),
