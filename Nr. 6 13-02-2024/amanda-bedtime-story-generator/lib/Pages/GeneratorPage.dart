@@ -22,12 +22,14 @@ class GeneratorPage extends StatelessWidget {
     }
 
     return Container(
+      // Adding a background image
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/disney.jpeg"),
           fit: BoxFit.cover,
         ),
       ),
+
       child: Container(
         decoration:
             BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(15))),
