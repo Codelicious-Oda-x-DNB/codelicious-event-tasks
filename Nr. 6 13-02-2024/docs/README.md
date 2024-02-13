@@ -95,7 +95,8 @@ flutter run -d chrome --web-browser-flag "--disable-web-security"
 ## Step 5: Change the UI
 
 We want to create a page that looks something like this:
-![image](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/assets/36000728/6b7502d7-1cfe-44dd-8dc8-9b57e9dd83bb)
+![304158629-9e5e281e-68d7-45bd-805a-865d88cfd925](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/assets/90447375/37477e23-171d-480d-a164-e253eef26fd5)
+
 
 
 The goal is to have one text field where the user can type, one button that the user needs to click to generate the story by sending an API call to OpenAI, and finally, the results from OpenAI need to show somewhere. 
