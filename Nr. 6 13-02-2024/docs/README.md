@@ -4,6 +4,15 @@
 ### Recap of last workshop
 We followed [this tutorial](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0), where we created a word pair generator for Chrome.
 
+<details>
+<summary>
+ Online 🛜
+</summary>
+<br>
+You can start on **Step 4 Add a button** and use this code as starting point: www.tinyurl.com/codelicious-v0
+ </br>
+</details>
+
 # Today's workshop 
 
 ## Step 1: Open source code
