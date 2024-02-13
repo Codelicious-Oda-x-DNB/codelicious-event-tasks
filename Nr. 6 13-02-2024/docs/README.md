@@ -142,6 +142,7 @@ You can take a look at www.tinyurl.com/codelicious-finished to get inspiration.
  Local :computer:
 </summary>
 <br>
+ 
 [Take a look at the full solution here for inspiration.](https://github.com/Codelicious-Oda-x-DNB/codelicious-event-tasks/tree/main/Nr.%206%2013-02-2024/amanda-bedtime-story-generator)
   </br>
 </details>
