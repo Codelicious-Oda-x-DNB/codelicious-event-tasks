@@ -98,7 +98,7 @@ Copy this code snippet, and paste in your own secret key in the OPEN_API_KEY var
 String OPENAI_API_KEY = 'Bearer <YOUR_SECRET_KEY>';
 final dio = Dio();
 
-Future<ChatCompletion> getOpen() async {
+Future<String> getOpenAIChatResponse() async {
   final response = await dio.post(
     'https://api.openai.com/v1/chat/completions',
     data: {
@@ -123,7 +123,7 @@ Future<ChatCompletion> getOpen() async {
       },
     ),
   );
-  return response.data;
+  return response.data.choices[0];
 }
 ```
 
